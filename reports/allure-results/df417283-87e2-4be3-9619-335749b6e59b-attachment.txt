@@ -1,0 +1,20 @@
+[OK] Starting browser: chromium
+[OK] Headless mode: False (headed=True)
+[INFO] Navigating to: https://naveenautomationlabs.com/opencart
+[TRACE] Tracing enabled - capturing screenshots and actions
+Exception while clicking 'Login' : Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a:has-text('Login')")
+    - locator resolved to <a href="https://naveenautomationlabs.com/opencart/index.php?route=account/login">Login</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+
+[RESULT] Test 'test_login_data_driven[Valid login-viratVK@gmail.com-123456-success]' result: [FAIL]
+[SAVE] Trace saved: reports/traces/test_login_data_driven[Valid login-viratVK@gmail.com-123456-success]_trace.zip
+[CLEANUP] Closing browser context and stopping Playwright...

@@ -1,0 +1,23 @@
+[OK] Starting browser: chromium
+[OK] Headless mode: False (headed=True)
+[INFO] Navigating to: https://naveenautomationlabs.com/opencart
+[TRACE] Tracing enabled - capturing screenshots and actions
+Exception while clicking 'Register': Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("a:has-text('Register')")
+    - locator resolved to <a href="https://naveenautomationlabs.com/opencart/index.php?route=account/register">Register</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+
+[RESULT] Test 'test_user_registration' result: [FAIL]
+[SAVE] Trace saved: reports/traces/test_user_registration_trace.zip
+[SAVE] Screenshot saved: reports/screenshots/test_user_registration.png
+[ATTACH] Screenshot attached to Allure report
+[ATTACH] Video attached to Allure report
+[CLEANUP] Closing browser context and stopping Playwright...
