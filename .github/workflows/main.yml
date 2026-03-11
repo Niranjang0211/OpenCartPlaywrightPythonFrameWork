@@ -3,27 +3,28 @@ name: Playwright Tests
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   playwright:
-    name: Playwright Tests
     runs-on: ubuntu-latest
 
     container:
       image: mcr.microsoft.com/playwright/python:v1.55.0-noble
-      options: --user 1001
 
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout code
+        uses: actions/checkout@v5
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install pytest
+          pip install pytest-playwright
           pip install -r requirements.txt
           python -m playwright install
 
+      - name: Verify installation
+        run: pip list
+
       - name: Run tests
-        run: pytest
+        run: python -m pytest
