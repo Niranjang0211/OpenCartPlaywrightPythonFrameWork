@@ -22,7 +22,7 @@ def pytest_addoption(parser):
     Adds command line options for test configuration.
     You can override these when running pytest or store defaults in pytest.ini.
     """
-    parser.addoption("--browser", default="chromium", help="Browser: chromium, firefox, webkit")
+    # parser.addoption("--browser", default="chromium", help="Browser: chromium, firefox, webkit")
     parser.addoption("--headed", action="store_true", help="Run in headed (visible) mode")
     #parser.addoption("--base-url", default="https://tutorialsninja.com/demo/", help="Base URL for tests")
     parser.addoption("--base-url", default="https://naveenautomationlabs.com/opencart", help="Base URL for tests")
